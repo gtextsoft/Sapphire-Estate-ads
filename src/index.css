@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 160 10% 10%;
+
+    --card: 140 20% 97%;
+    --card-foreground: 160 10% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 160 10% 10%;
+
+    --primary: 152 60% 36%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 140 25% 94%;
+    --secondary-foreground: 160 10% 15%;
+
+    --muted: 140 15% 93%;
+    --muted-foreground: 160 5% 45%;
+
+    --accent: 152 60% 36%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 140 15% 88%;
+    --input: 140 15% 88%;
+    --ring: 152 60% 36%;
+
+    --radius: 0.5rem;
+
+    --gold: 152 60% 36%;
+    --gold-light: 152 55% 45%;
+    --navy: 0 0% 100%;
+    --navy-light: 140 20% 97%;
+
+    /* Dark section tokens */
+    --dark-bg: 160 15% 10%;
+    --dark-card: 160 12% 14%;
+    --dark-border: 160 10% 20%;
+    --dark-text: 0 0% 92%;
+    --dark-muted: 160 5% 55%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 160 10% 10%;
+    --sidebar-primary: 152 60% 36%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 140 25% 94%;
+    --sidebar-accent-foreground: 160 10% 10%;
+    --sidebar-border: 140 15% 88%;
+    --sidebar-ring: 152 60% 36%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .text-gold-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--gold)), hsl(var(--gold-light)));
+  }
+}
+
+@keyframes cta-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 hsl(var(--primary) / 0.4);
+  }
+  50% {
+    box-shadow: 0 0 20px 6px hsl(var(--primary) / 0.2);
+  }
+}
+
+.animate-cta-pulse {
+  animation: cta-pulse 2s ease-in-out infinite;
+}
+
+html {
+  scroll-behavior: smooth;
+}
