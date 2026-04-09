@@ -1,5 +1,4 @@
 import AnimateOnScroll from "./AnimateOnScroll";
-import { FORM_URL } from "@/lib/constants";
 
 const UrgencySection = () => (
   <section className="py-20 bg-dark-bg">
@@ -15,7 +14,7 @@ const UrgencySection = () => (
             <p>The risk of waiting isn't losing the plot. It's paying significantly more for the same asset in 12 months.</p>
           </div>
           <a
-            href={FORM_URL}
+            href="https://forms.zoho.com/stephenstephen1/form/SAPPHIREESTATE"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-8 inline-flex bg-primary text-primary-foreground px-8 py-4 rounded-md font-semibold text-sm hover:opacity-90 transition-opacity animate-cta-pulse"
