@@ -1,7 +1,6 @@
 import { MapPin, CheckCircle, FileText, Gift } from "lucide-react";
 import { motion } from "framer-motion";
 import heroBg from "@/assets/hero-bg.jpg";
-import { FORM_URL } from "@/lib/constants";
 
 const bullets = [
   { icon: MapPin, text: "Sits directly on a tarred road — accessible today, not someday" },
@@ -73,7 +72,7 @@ const HeroSection = () => (
         transition={{ duration: 0.5, delay: 0.9, ease: "easeOut" }}
       >
         <a
-          href={FORM_URL}
+          href="https://forms.zoho.com/stephenstephen1/form/SAPPHIREESTATE"
           target="_blank"
           rel="noopener noreferrer"
           className="mt-10 inline-flex items-center bg-primary text-primary-foreground px-8 py-4 rounded-md font-semibold text-base hover:opacity-90 transition-opacity"

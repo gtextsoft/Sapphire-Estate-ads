@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { FORM_URL } from "@/lib/constants";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -25,7 +24,7 @@ const Navbar = () => {
           Sapphire City
         </a>
         <a
-          href={FORM_URL}
+          href="https://forms.zoho.com/stephenstephen1/form/SAPPHIREESTATE"
           target="_blank"
           rel="noopener noreferrer"
           className="hidden md:inline-flex bg-primary text-primary-foreground px-6 py-2.5 rounded-md font-semibold text-sm hover:opacity-90 transition-opacity"
@@ -39,7 +38,7 @@ const Navbar = () => {
       {menuOpen && (
         <div className="md:hidden bg-dark-bg/95 backdrop-blur-lg border-b border-dark-border p-4">
           <a
-            href={FORM_URL}
+            href="https://forms.zoho.com/stephenstephen1/form/SAPPHIREESTATE"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setMenuOpen(false)}

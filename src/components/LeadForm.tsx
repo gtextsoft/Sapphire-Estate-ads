@@ -1,5 +1,4 @@
 import AnimateOnScroll from "./AnimateOnScroll";
-import { FORM_URL } from "@/lib/constants";
 
 const budgetOptions = ["₦5M – ₦10M", "₦10M – ₦20M", "₦20M+"];
 const purposeOptions = ["Investment", "Personal Use", "Undecided"];
@@ -45,13 +44,14 @@ const LeadForm = () => {
                   ))}
                 </div>
               </div>
-              <button
-                type="button"
-                onClick={() => window.open(FORM_URL, "_blank", "noopener,noreferrer")}
-                className="w-full bg-primary text-primary-foreground py-4 rounded-md font-semibold text-sm hover:opacity-90 transition-opacity"
+              <a
+                href="https://forms.zoho.com/stephenstephen1/form/SAPPHIREESTATE"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full text-center bg-primary text-primary-foreground py-4 rounded-md font-semibold text-sm hover:opacity-90 transition-opacity"
               >
                 👉 Send Me the Full Property Details
-              </button>
+              </a>
               <p className="text-center text-xs text-dark-muted">🔒 Your details are private. No spam, ever.</p>
             </form>
           </div>
