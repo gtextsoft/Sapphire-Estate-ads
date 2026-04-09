@@ -11,9 +11,7 @@ const FinalCTA = () => (
           By the time Gwagwalada becomes a headline, this pricing will be history. Fill the form now — get the full details, ask your questions, and decide with clarity.
         </p>
         <a
-          href="https://forms.zoho.com/stephenstephen1/form/SAPPHIREESTATE"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="#form"
           className="inline-flex bg-primary text-primary-foreground px-10 py-4 rounded-md font-semibold text-base hover:opacity-90 transition-opacity animate-cta-pulse"
         >
           👉 Get Full Details & Reserve My Plot

@@ -24,9 +24,7 @@ const Navbar = () => {
           Sapphire City
         </a>
         <a
-          href="https://forms.zoho.com/stephenstephen1/form/SAPPHIREESTATE"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="#form"
           className="hidden md:inline-flex bg-primary text-primary-foreground px-6 py-2.5 rounded-md font-semibold text-sm hover:opacity-90 transition-opacity"
         >
           Reserve Your Plot
@@ -38,9 +36,7 @@ const Navbar = () => {
       {menuOpen && (
         <div className="md:hidden bg-dark-bg/95 backdrop-blur-lg border-b border-dark-border p-4">
           <a
-            href="https://forms.zoho.com/stephenstephen1/form/SAPPHIREESTATE"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#form"
             onClick={() => setMenuOpen(false)}
             className="block w-full text-center bg-primary text-primary-foreground px-6 py-3 rounded-md font-semibold text-sm"
           >
