@@ -1,10 +1,10 @@
 import AnimateOnScroll from "./AnimateOnScroll";
 
 const UrgencySection = () => (
-  <section className="py-20 bg-dark-bg">
+  <section className="py-16 md:py-20 bg-dark-bg">
     <div className="container max-w-3xl">
       <AnimateOnScroll>
-        <div className="bg-dark-card border border-dark-border rounded-xl p-8 md:p-12">
+        <div className="bg-dark-card border border-dark-border rounded-xl p-5 sm:p-6 md:p-12">
           <h2 className="text-2xl md:text-3xl font-bold mb-6 text-dark-text">
             Anniversary Pricing Has an Expiry. <span className="text-gold-gradient">Development Doesn't Wait.</span>
           </h2>
@@ -15,7 +15,7 @@ const UrgencySection = () => (
           </div>
           <a
             href="#form"
-            className="mt-8 inline-flex bg-primary text-primary-foreground px-8 py-4 rounded-md font-semibold text-sm hover:opacity-90 transition-opacity animate-cta-pulse"
+            className="mt-8 inline-flex w-full sm:w-auto justify-center text-center bg-primary text-primary-foreground px-5 sm:px-8 py-3.5 sm:py-4 rounded-md font-semibold text-sm hover:opacity-90 transition-opacity animate-cta-pulse"
           >
             👉 Lock In This Price Now
           </a>

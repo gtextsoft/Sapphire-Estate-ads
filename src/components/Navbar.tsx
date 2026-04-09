@@ -11,6 +11,17 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handler);
   }, []);
 
+  useEffect(() => {
+    const onResize = () => {
+      if (window.innerWidth >= 768) {
+        setMenuOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -19,17 +30,21 @@ const Navbar = () => {
           : "bg-transparent"
       }`}
     >
-      <div className="container flex items-center justify-between h-16 md:h-20">
+      <div className="container flex items-center justify-between h-16 md:h-20 gap-4">
         <a href="#" className={`font-display text-xl md:text-2xl font-bold transition-colors ${scrolled ? "text-primary" : "text-primary"}`}>
           Sapphire City
         </a>
         <a
           href="#form"
-          className="hidden md:inline-flex bg-primary text-primary-foreground px-6 py-2.5 rounded-md font-semibold text-sm hover:opacity-90 transition-opacity"
+          className="hidden md:inline-flex whitespace-nowrap bg-primary text-primary-foreground px-6 py-2.5 rounded-md font-semibold text-sm hover:opacity-90 transition-opacity"
         >
           Reserve Your Plot
         </a>
-        <button className={`md:hidden transition-colors ${scrolled ? "text-dark-text" : "text-dark-text"}`} onClick={() => setMenuOpen(!menuOpen)}>
+        <button
+          aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+          className={`md:hidden transition-colors ${scrolled ? "text-dark-text" : "text-dark-text"}`}
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
           {menuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>

@@ -1,7 +1,7 @@
 import AnimateOnScroll from "./AnimateOnScroll";
 
 const FinalCTA = () => (
-  <section className="py-20 bg-dark-bg">
+  <section className="py-16 md:py-20 bg-dark-bg">
     <div className="container max-w-2xl text-center">
       <AnimateOnScroll>
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 text-dark-text">
@@ -12,7 +12,7 @@ const FinalCTA = () => (
         </p>
         <a
           href="#form"
-          className="inline-flex bg-primary text-primary-foreground px-10 py-4 rounded-md font-semibold text-base hover:opacity-90 transition-opacity animate-cta-pulse"
+          className="inline-flex w-full sm:w-auto justify-center text-center bg-primary text-primary-foreground px-5 sm:px-10 py-3.5 sm:py-4 rounded-md font-semibold text-sm sm:text-base hover:opacity-90 transition-opacity animate-cta-pulse"
         >
           👉 Get Full Details & Reserve My Plot
         </a>

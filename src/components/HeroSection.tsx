@@ -16,17 +16,17 @@ const pricing = [
 ];
 
 const HeroSection = () => (
-  <section className="relative min-h-screen flex items-center pt-20">
+  <section className="relative min-h-screen flex items-center pt-16 sm:pt-20">
     <div className="absolute inset-0">
       <img src={heroBg} alt="Sapphire City estate aerial view" className="w-full h-full object-cover" width={1920} height={1080} />
       <div className="absolute inset-0 bg-gradient-to-b from-foreground/50 via-foreground/70 to-foreground/90" />
     </div>
-    <div className="container relative z-10 py-16 md:py-24">
+    <div className="container relative z-10 py-14 sm:py-16 md:py-24">
       <motion.h1
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
-        className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight max-w-4xl text-dark-text"
+        className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight max-w-4xl text-dark-text text-balance"
       >
         Own Land in Abuja Before the Price{" "}
         <span className="text-gold-gradient">Catches Up.</span>
@@ -35,11 +35,11 @@ const HeroSection = () => (
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-        className="mt-6 text-dark-muted text-base md:text-lg max-w-2xl leading-relaxed"
+        className="mt-5 sm:mt-6 text-dark-muted text-base md:text-lg max-w-2xl leading-relaxed"
       >
         Sapphire City, Gwagwalada — a fully structured, gated estate with verified title, tarred road access, and flexible ownership plans built for serious buyers.
       </motion.p>
-      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl">
+      <div className="mt-8 sm:mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl">
         {bullets.map((b, i) => (
           <motion.div
             key={i}
@@ -49,7 +49,7 @@ const HeroSection = () => (
             className="flex items-start gap-3"
           >
             <b.icon className="w-5 h-5 text-primary mt-0.5 shrink-0" />
-            <span className="text-sm text-dark-text/80">{b.text}</span>
+            <span className="text-sm leading-relaxed text-dark-text/80">{b.text}</span>
           </motion.div>
         ))}
       </div>
@@ -57,10 +57,10 @@ const HeroSection = () => (
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.7, ease: "easeOut" }}
-        className="mt-10 flex flex-wrap gap-3"
+        className="mt-8 sm:mt-10 flex flex-wrap gap-2 sm:gap-3"
       >
         {pricing.map((p, i) => (
-          <div key={i} className="bg-dark-card/80 backdrop-blur-sm border border-dark-border rounded-full px-5 py-2.5 text-sm">
+          <div key={i} className="bg-dark-card/80 backdrop-blur-sm border border-dark-border rounded-full px-4 sm:px-5 py-2.5 text-sm">
             <span className="font-bold text-primary">{p.price}</span>
             <span className="text-dark-muted ml-2">— {p.label}</span>
           </div>
@@ -73,7 +73,7 @@ const HeroSection = () => (
       >
         <a
           href="#form"
-          className="mt-10 inline-flex items-center bg-primary text-primary-foreground px-8 py-4 rounded-md font-semibold text-base hover:opacity-90 transition-opacity"
+          className="mt-8 sm:mt-10 inline-flex w-full sm:w-auto justify-center text-center items-center bg-primary text-primary-foreground px-5 sm:px-8 py-3.5 sm:py-4 rounded-md font-semibold text-sm sm:text-base hover:opacity-90 transition-opacity"
         >
           👉 Reserve Your Plot — Get Full Details
         </a>

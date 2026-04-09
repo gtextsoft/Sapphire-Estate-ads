@@ -20,7 +20,7 @@ const FAQSection = () => (
       <AnimateOnScroll delay={0.1}>
         <Accordion type="single" collapsible className="space-y-4">
           {faqs.map((f, i) => (
-            <AccordionItem key={i} value={`faq-${i}`} className="bg-card border border-border rounded-lg px-6 data-[state=open]:border-primary/30">
+            <AccordionItem key={i} value={`faq-${i}`} className="bg-card border border-border rounded-lg px-4 sm:px-6 data-[state=open]:border-primary/30">
               <AccordionTrigger className="text-sm font-medium py-5 hover:no-underline text-left [&>svg]:text-primary [&>svg]:w-5 [&>svg]:h-5">
                 {f.q}
               </AccordionTrigger>
